@@ -91,10 +91,9 @@ export default function Home() {
         {/* NOSOTROS */}
         <section id="nosotros" className="py-20 lg:py-28">
           <div className="mx-auto grid max-w-7xl gap-12 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
-            <div className="relative flex items-center justify-center bg-ink p-10 sm:p-16">
+            <div className="relative flex items-center justify-center border border-ink/10 bg-white p-10 shadow-sm sm:p-16">
               <div className="absolute inset-y-0 left-0 w-2 bg-brand" />
-              <img src="/brand/icon-light.svg" alt="" className="w-full max-w-sm" />
-              <p className="absolute bottom-6 right-6 font-brand text-xs tracking-[0.35em] text-white/50">HORIZONTE</p>
+              <img src="/brand/logo.svg" alt="Horizonte Constructora SAS" className="w-full max-w-md" />
             </div>
             <div>
               <Eyebrow>Nuestra empresa</Eyebrow>
