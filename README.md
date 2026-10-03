@@ -11,6 +11,19 @@ npm run build      # build de producción
 STATIC_EXPORT=1 npm run build   # sitio estático en /out (hosting sin servidor)
 ```
 
+## Demo en GitHub Pages
+
+Cada push a `main` (o a `feat/landing-page`) ejecuta `.github/workflows/deploy-pages.yml`, que construye el sitio
+y lo publica en la rama `gh-pages`. La demo queda en `https://vdaymon.github.io/horizonte-web/`.
+
+Para activarlo una sola vez: **Settings → Pages → Build and deployment → Source: Deploy from a branch →
+Branch: `gh-pages` / `(root)`**. GitHub Pages solo funciona en repositorios públicos, salvo con un plan de pago.
+
+## Animaciones
+
+Hechas con [Motion](https://motion.dev) (`src/components/motion.tsx`) y CSS (`src/app/globals.css`).
+Respetan la opción del sistema "reducir movimiento".
+
 ## Editar el contenido
 
 Todo el contenido editable está en `src/data/site.ts`:
