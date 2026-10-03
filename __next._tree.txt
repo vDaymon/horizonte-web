@@ -1,0 +1,8 @@
+:HL["/horizonte-web/_next/static/chunks/12z24pf3812db.css","style"]
+:HL["/horizonte-web/_next/static/media/e8f2fbee2754df70-s.p.1dqa_6e_ad4sj.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/horizonte-web/_next/static/media/fe83cf2ab39e9c57-s.p.2qpii4b6jmzj9.woff2","font",{"crossOrigin":"","type":"font/woff2"}]
+:HL["/horizonte-web/brand/logo.svg","image"]
+:HL["/horizonte-web/brand/icon-light.svg","image"]
+:HL["/horizonte-web/brand/wordmark-light.svg","image"]
+:HL["/horizonte-web/img/pintura.jpg","image"]
+0:{"tree":{"name":"","param":null,"prefetchHints":4176,"slots":{"children":{"name":"__PAGE__","param":null,"prefetchHints":4256,"slots":null}}},"staleTime":300,"buildId":"OZqEZ9DpvfUNJoJUTP-JF"}
