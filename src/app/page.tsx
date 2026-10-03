@@ -214,7 +214,7 @@ export default function Home() {
                 Obras que hablan <span className="text-brand">por nosotros</span>
               </h2>
               <p className="mt-4 text-lg text-ink/70">
-                Desde cimentaciones para torres de gran altura hasta remodelaciones de vivienda y oficina.
+                Registro fotográfico verificado de nuestras obras, organizado por etapa: fecha, ubicación y avance real de cada frente de trabajo.
               </p>
             </Reveal>
             <Projects />

@@ -30,8 +30,16 @@ Todo el contenido editable está en `src/data/site.ts`:
 
 - **Contacto**: teléfono, WhatsApp y dirección.
 - **Servicios**, **mantenimiento**, **metodología 360°** y **valores**.
-- **Proyectos**: para poner una foto, copia la imagen en `public/proyectos/` y pon su ruta en `image`
-  (por ejemplo `image: "/proyectos/torres-cali.jpg"`). Si un proyecto no tiene `image`, se muestra un espacio reservado.
+- **Proyectos**: cada proyecto agrupa sus fotos por etapa de obra, con fecha y pie de foto.
+  Las fotos van en `public/proyectos/<proyecto>/full/` (1600 px) y `public/proyectos/<proyecto>/thumb/` (720 px).
+  Para crear las dos versiones de una foto nueva:
+
+  ```bash
+  convert original.jpg -resize "1600x1600>" -strip -quality 82 public/proyectos/palmaseca/full/41-avance.jpg
+  convert original.jpg -resize "720x720>"  -strip -quality 74 public/proyectos/palmaseca/thumb/41-avance.jpg
+  ```
+
+  y se agrega una línea en `media` del proyecto en `src/data/site.ts`.
 
 ## Marca
 
