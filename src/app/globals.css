@@ -1,0 +1,40 @@
+@import "tailwindcss";
+
+/* Paleta tomada del logo y los flyers de Horizonte */
+@theme {
+  --color-brand: #a8101b;
+  --color-brand-dark: #7d0a12;
+  --color-brand-light: #c8202b;
+  --color-ink: #1d1f22;
+  --color-ink-soft: #2b2e33;
+  --color-mist: #f1f1f2;
+  --font-sans: var(--font-montserrat), ui-sans-serif, system-ui, sans-serif;
+  --font-brand: var(--font-michroma), var(--font-montserrat), sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: #ffffff;
+  color: var(--color-ink);
+}
+
+/* Fondo de "planos" sutil, como en las piezas gráficas */
+.blueprint {
+  background-color: var(--color-mist);
+  background-image:
+    linear-gradient(rgb(29 31 34 / 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(29 31 34 / 0.05) 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+.clip-diagonal {
+  clip-path: polygon(18% 0, 100% 0, 100% 100%, 0 100%, 8% 50%);
+}
+
+.clip-slant {
+  clip-path: polygon(0 0, 100% 0, 100% 88%, 0 100%);
+}
