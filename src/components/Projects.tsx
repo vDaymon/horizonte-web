@@ -144,6 +144,7 @@ function Lightbox({
                 poster={item.thumb}
                 controls
                 autoPlay
+                muted
                 playsInline
                 className="max-h-full max-w-full bg-black shadow-2xl"
               />
