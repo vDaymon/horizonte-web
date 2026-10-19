@@ -67,11 +67,13 @@ export default function Home() {
                 <div className="mt-8 border-l-4 border-brand bg-mist p-6">
                   <h3 className="font-bold uppercase tracking-wide text-ink">Nuestro objetivo</h3>
                   <p className="mt-2 text-ink/70">
-                    Ser el aliado estratégico que ejecuta estructuras de concreto con calidad y cumplimiento.
+                    Consolidarnos como una empresa líder a escala departamental en la estructuración, gestión,
+                    construcción y remodelación de proyectos, convirtiéndonos en un aliado estratégico para
+                    propietarios, inversionistas, empresas y desarrolladores.
                   </p>
                 </div>
               </Reveal>
-              <Stagger className="mt-8 grid gap-4 sm:grid-cols-2">
+              <Stagger className="mt-8 grid gap-4 sm:grid-cols-3">
                 {values.map((v) => (
                   <StaggerItem key={v.title} className="group flex items-center gap-3 font-semibold text-ink">
                     <Icon
@@ -231,15 +233,28 @@ export default function Home() {
           <Reveal className="relative mx-auto flex max-w-7xl flex-col items-start justify-between gap-6 px-4 py-14 sm:px-6 md:flex-row md:items-center">
             <div>
               <h2 className="text-3xl font-extrabold uppercase sm:text-4xl">¿Tienes un proyecto en mente?</h2>
-              <p className="mt-2 text-lg text-white/85">Calidad, compromiso y atención en cada detalle.</p>
+              <p className="mt-2 text-xl font-bold uppercase tracking-[0.2em] text-white/85">Contáctanos</p>
             </div>
-            <a
-              href={contact.phoneHref}
-              className="group flex items-center gap-3 bg-white px-7 py-4 text-xl font-extrabold text-brand shadow-lg transition hover:-translate-y-1 hover:shadow-2xl"
-            >
-              <PhoneIcon className="h-6 w-6 group-hover:animate-[ring_0.6s_ease-in-out]" />
-              {contact.phone}
-            </a>
+            <div className="flex flex-col gap-3 sm:flex-row">
+              <a
+                href={contact.phoneHref}
+                className="group flex items-center gap-3 bg-white px-6 py-4 text-xl font-extrabold text-brand shadow-lg transition hover:-translate-y-1 hover:shadow-2xl"
+              >
+                <PhoneIcon className="h-6 w-6 group-hover:animate-[ring_0.6s_ease-in-out]" />
+                {contact.phone}
+              </a>
+              <a
+                href={contact.whatsappHref}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center gap-3 bg-ink px-6 py-4 text-xl font-extrabold text-white shadow-lg transition hover:-translate-y-1 hover:shadow-2xl"
+              >
+                <span className="flex h-8 w-8 items-center justify-center rounded-full bg-[#25d366]">
+                  <WhatsAppIcon className="h-5 w-5" />
+                </span>
+                {contact.whatsapp}
+              </a>
+            </div>
           </Reveal>
         </section>
 

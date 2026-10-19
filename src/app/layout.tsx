@@ -8,7 +8,7 @@ const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-montserrat
 const michroma = Michroma({ subsets: ["latin"], weight: "400", variable: "--font-michroma" });
 
 export const metadata: Metadata = {
-  title: "Horizonte Constructora SAS | Construcción, Diseño y Mantenimiento",
+  title: "Horizonte Constructora SAS | Construimos hoy, transformamos mañana",
   description:
     "Construcción, arquitectura y diseño, remodelación, interventoría, gerencia de proyectos y mantenimiento locativo y residencial en Cali. Construimos hoy, transformamos mañana.",
   icons: { icon: asset("/brand/icon-full.svg") },

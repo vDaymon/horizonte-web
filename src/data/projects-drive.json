@@ -1,0 +1,803 @@
+{
+ "studio-rozo": [
+  {
+   "file": "01-estructura.jpg",
+   "stage": "estructura",
+   "caption": "Cubierta metálica de la ampliación en tercer piso"
+  },
+  {
+   "file": "02-estructura.jpg",
+   "stage": "estructura",
+   "caption": "Montaje de estructura liviana sobre placa"
+  },
+  {
+   "file": "03-estructura.jpg",
+   "stage": "estructura",
+   "caption": "Estructura de cubierta y muros en mampostería"
+  },
+  {
+   "file": "04-estructura.jpg",
+   "stage": "estructura",
+   "caption": "Fachada en perfilería metálica"
+  },
+  {
+   "file": "05-estructura.jpg",
+   "stage": "estructura",
+   "caption": "Cerramiento en placa de fibrocemento"
+  },
+  {
+   "file": "06-estructura.jpg",
+   "stage": "estructura",
+   "caption": "Modelo 3D de la estructura metálica"
+  },
+  {
+   "file": "07-estructura.mp4",
+   "poster": "07-estructura.jpg",
+   "stage": "estructura",
+   "caption": "Avance de la ampliación",
+   "video": true
+  },
+  {
+   "file": "08-estructura.mp4",
+   "poster": "08-estructura.jpg",
+   "stage": "estructura",
+   "caption": "Instalación de muros en drywall",
+   "video": true
+  },
+  {
+   "file": "09-estructura.mp4",
+   "poster": "09-estructura.jpg",
+   "stage": "estructura",
+   "caption": "Placa de la ampliación",
+   "video": true
+  },
+  {
+   "file": "10-estructura.mp4",
+   "poster": "10-estructura.jpg",
+   "stage": "estructura",
+   "caption": "Estructura y cubierta de la terraza",
+   "video": true
+  },
+  {
+   "file": "11-estructura.mp4",
+   "poster": "11-estructura.jpg",
+   "stage": "estructura",
+   "caption": "Adecuación de espacios interiores",
+   "video": true
+  },
+  {
+   "file": "12-estructura.mp4",
+   "poster": "12-estructura.jpg",
+   "stage": "estructura",
+   "caption": "Espacios interiores en obra blanca",
+   "video": true
+  },
+  {
+   "file": "13-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Retiro de enchape y preparación de fachada"
+  },
+  {
+   "file": "14-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Fachada en intervención"
+  },
+  {
+   "file": "15-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Fachada lateral en remodelación"
+  },
+  {
+   "file": "16-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Celosías verticales en fachada"
+  },
+  {
+   "file": "17-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Instalación de celosías"
+  },
+  {
+   "file": "18-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Puerta principal en madera"
+  },
+  {
+   "file": "19-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Ventanería en aluminio"
+  },
+  {
+   "file": "20-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Fachada terminada con piscina"
+  },
+  {
+   "file": "21-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Vista del jardín y la piscina"
+  },
+  {
+   "file": "22-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Fachada posterior terminada"
+  },
+  {
+   "file": "23-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Patio de la piscina"
+  },
+  {
+   "file": "24-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Volumen principal y piscina"
+  },
+  {
+   "file": "25-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Iluminación nocturna de fachada"
+  },
+  {
+   "file": "26-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Fachada de noche"
+  },
+  {
+   "file": "27-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Acceso a la vivienda"
+  },
+  {
+   "file": "28-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Fachada desde el jardín"
+  },
+  {
+   "file": "29-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Vista general del lote"
+  },
+  {
+   "file": "30-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Fachada principal"
+  },
+  {
+   "file": "31-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Patio interior con piscina"
+  },
+  {
+   "file": "32-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Terraza iluminada"
+  },
+  {
+   "file": "33-fachadas.jpg",
+   "stage": "fachadas",
+   "caption": "Vista aérea del proyecto"
+  },
+  {
+   "file": "34-interiores.jpg",
+   "stage": "interiores",
+   "caption": "Sala con cielo en retícula e iluminación"
+  },
+  {
+   "file": "35-interiores.jpg",
+   "stage": "interiores",
+   "caption": "Comedor y cocina integrados"
+  },
+  {
+   "file": "36-interiores.jpg",
+   "stage": "interiores",
+   "caption": "Pasillo con acabado en madera"
+  },
+  {
+   "file": "37-interiores.jpg",
+   "stage": "interiores",
+   "caption": "Habitación con cielo e iluminación LED"
+  },
+  {
+   "file": "38-interiores.jpg",
+   "stage": "interiores",
+   "caption": "Habitación con salida a terraza"
+  },
+  {
+   "file": "39-interiores.jpg",
+   "stage": "interiores",
+   "caption": "Cielo raso en drywall"
+  },
+  {
+   "file": "40-interiores.mp4",
+   "poster": "40-interiores.jpg",
+   "stage": "interiores",
+   "caption": "Recorrido: sala, cocina y comedor",
+   "video": true
+  },
+  {
+   "file": "41-interiores.mp4",
+   "poster": "41-interiores.jpg",
+   "stage": "interiores",
+   "caption": "Recorrido por la zona social",
+   "video": true
+  },
+  {
+   "file": "42-interiores.mp4",
+   "poster": "42-interiores.jpg",
+   "stage": "interiores",
+   "caption": "Sala con cielo iluminado",
+   "video": true
+  },
+  {
+   "file": "43-interiores.mp4",
+   "poster": "43-interiores.jpg",
+   "stage": "interiores",
+   "caption": "Baño terminado",
+   "video": true
+  },
+  {
+   "file": "44-interiores.mp4",
+   "poster": "44-interiores.jpg",
+   "stage": "interiores",
+   "caption": "Habitación en acabados",
+   "video": true
+  },
+  {
+   "file": "45-interiores.mp4",
+   "poster": "45-interiores.jpg",
+   "stage": "interiores",
+   "caption": "Cielo con luz perimetral",
+   "video": true
+  },
+  {
+   "file": "46-interiores.mp4",
+   "poster": "46-interiores.jpg",
+   "stage": "interiores",
+   "caption": "Zona social",
+   "video": true
+  },
+  {
+   "file": "47-interiores.mp4",
+   "poster": "47-interiores.jpg",
+   "stage": "interiores",
+   "caption": "Remodelación de interiores",
+   "video": true
+  },
+  {
+   "file": "48-interiores.mp4",
+   "poster": "48-interiores.jpg",
+   "stage": "interiores",
+   "caption": "Espacios en remodelación, segundo piso",
+   "video": true
+  },
+  {
+   "file": "49-interiores.mp4",
+   "poster": "49-interiores.jpg",
+   "stage": "interiores",
+   "caption": "Baño en obra",
+   "video": true
+  },
+  {
+   "file": "50-interiores.mp4",
+   "poster": "50-interiores.jpg",
+   "stage": "interiores",
+   "caption": "Habitación en acabados",
+   "video": true
+  },
+  {
+   "file": "51-interiores.mp4",
+   "poster": "51-interiores.jpg",
+   "stage": "interiores",
+   "caption": "Sala de TV",
+   "video": true
+  },
+  {
+   "file": "52-banos.jpg",
+   "stage": "banos",
+   "caption": "Baño con enchape tipo mármol"
+  },
+  {
+   "file": "53-banos.jpg",
+   "stage": "banos",
+   "caption": "Ducha en enchape"
+  },
+  {
+   "file": "54-banos.jpg",
+   "stage": "banos",
+   "caption": "Mueble de baño a medida"
+  },
+  {
+   "file": "55-banos.mp4",
+   "poster": "55-banos.jpg",
+   "stage": "banos",
+   "caption": "Recorrido por el baño terminado",
+   "video": true
+  },
+  {
+   "file": "56-banos.mp4",
+   "poster": "56-banos.jpg",
+   "stage": "banos",
+   "caption": "Baño con mueble flotante",
+   "video": true
+  },
+  {
+   "file": "57-escaleras.jpg",
+   "stage": "escaleras",
+   "caption": "Encofrado de escaleras estructurales"
+  },
+  {
+   "file": "58-escaleras.jpg",
+   "stage": "escaleras",
+   "caption": "Escalera en concreto con enchape"
+  },
+  {
+   "file": "59-escaleras.jpg",
+   "stage": "escaleras",
+   "caption": "Escalera terminada en porcelanato"
+  },
+  {
+   "file": "60-escaleras.jpg",
+   "stage": "escaleras",
+   "caption": "Fabricación de escalera metálica"
+  },
+  {
+   "file": "61-escaleras.jpg",
+   "stage": "escaleras",
+   "caption": "Estructura de escalera en taller"
+  },
+  {
+   "file": "62-escaleras.jpg",
+   "stage": "escaleras",
+   "caption": "Escalera metálica lista para instalar"
+  },
+  {
+   "file": "63-escaleras.jpg",
+   "stage": "escaleras",
+   "caption": "Escalera metálica instalada"
+  },
+  {
+   "file": "64-escaleras.jpg",
+   "stage": "escaleras",
+   "caption": "Escalera de dos tramos"
+  },
+  {
+   "file": "65-escaleras.jpg",
+   "stage": "escaleras",
+   "caption": "Escalera con pasamanos en vidrio"
+  },
+  {
+   "file": "66-escaleras.mp4",
+   "poster": "66-escaleras.jpg",
+   "stage": "escaleras",
+   "caption": "Recorrido por la escalera",
+   "video": true
+  },
+  {
+   "file": "67-estudio.jpg",
+   "stage": "estudio",
+   "caption": "Render de la sala de grabación"
+  },
+  {
+   "file": "68-estudio.jpg",
+   "stage": "estudio",
+   "caption": "Render con iluminación acústica"
+  },
+  {
+   "file": "69-estudio.jpg",
+   "stage": "estudio",
+   "caption": "Estructura de paneles acústicos"
+  },
+  {
+   "file": "70-estudio.mp4",
+   "poster": "70-estudio.jpg",
+   "stage": "estudio",
+   "caption": "Instalación de piso",
+   "video": true
+  },
+  {
+   "file": "71-estudio.mp4",
+   "poster": "71-estudio.jpg",
+   "stage": "estudio",
+   "caption": "Piso del estudio",
+   "video": true
+  },
+  {
+   "file": "72-estudio.mp4",
+   "poster": "72-estudio.jpg",
+   "stage": "estudio",
+   "caption": "Estudio amoblado",
+   "video": true
+  },
+  {
+   "file": "73-estudio.mp4",
+   "poster": "73-estudio.jpg",
+   "stage": "estudio",
+   "caption": "Acabado del piso",
+   "video": true
+  },
+  {
+   "file": "74-estudio.mp4",
+   "poster": "74-estudio.jpg",
+   "stage": "estudio",
+   "caption": "Sala de grabación terminada",
+   "video": true
+  }
+ ],
+ "oficinas-d1": [
+  {
+   "file": "01-obra.jpg",
+   "stage": "obra",
+   "caption": "Inicio de obra: columnas y redes"
+  },
+  {
+   "file": "02-obra.jpg",
+   "stage": "obra",
+   "caption": "Armado de columnas"
+  },
+  {
+   "file": "03-obra.jpg",
+   "stage": "obra",
+   "caption": "Vaciado de columnas en concreto"
+  },
+  {
+   "file": "04-obra.jpg",
+   "stage": "obra",
+   "caption": "Cimentación junto a la bodega existente"
+  },
+  {
+   "file": "05-obra.jpg",
+   "stage": "obra",
+   "caption": "Formaleta de vigas de cimentación"
+  },
+  {
+   "file": "06-obra.jpg",
+   "stage": "obra",
+   "caption": "Columnas y vigas de amarre"
+  },
+  {
+   "file": "07-obra.jpg",
+   "stage": "obra",
+   "caption": "Viga de cimentación"
+  },
+  {
+   "file": "08-obra.jpg",
+   "stage": "obra",
+   "caption": "Excavación y armado"
+  },
+  {
+   "file": "09-obra.jpg",
+   "stage": "obra",
+   "caption": "Red contra incendio"
+  },
+  {
+   "file": "10-obra.jpg",
+   "stage": "obra",
+   "caption": "Detalle de armado de columna"
+  },
+  {
+   "file": "11-obra.jpg",
+   "stage": "obra",
+   "caption": "Estructura en concreto"
+  },
+  {
+   "file": "12-obra.jpg",
+   "stage": "obra",
+   "caption": "Estructura de entrepiso"
+  },
+  {
+   "file": "13-obra.jpg",
+   "stage": "obra",
+   "caption": "Andén en concreto terminado"
+  },
+  {
+   "file": "14-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Recepción"
+  },
+  {
+   "file": "15-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Lobby de recepción"
+  },
+  {
+   "file": "16-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Área de puestos de trabajo"
+  },
+  {
+   "file": "17-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Puestos de trabajo"
+  },
+  {
+   "file": "18-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Sala de juntas"
+  },
+  {
+   "file": "19-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Sala de reuniones"
+  },
+  {
+   "file": "20-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Zona de descanso"
+  },
+  {
+   "file": "21-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Oficina abierta"
+  },
+  {
+   "file": "22-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Zona colaborativa"
+  },
+  {
+   "file": "23-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Puesto de recepción"
+  },
+  {
+   "file": "24-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Comedor de empleados"
+  },
+  {
+   "file": "25-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Comedor con mobiliario"
+  },
+  {
+   "file": "26-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Comedor"
+  },
+  {
+   "file": "27-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Comedor y cafetería"
+  },
+  {
+   "file": "28-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Sala de espera"
+  },
+  {
+   "file": "29-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Cocineta"
+  }
+ ],
+ "estructuras-concreto": [
+  {
+   "file": "01-cimentacion.jpg",
+   "stage": "cimentacion",
+   "caption": "Pilotes y vigas de cimentación"
+  },
+  {
+   "file": "02-cimentacion.jpg",
+   "stage": "cimentacion",
+   "caption": "Canastas de acero para pilotes"
+  },
+  {
+   "file": "03-cimentacion.jpg",
+   "stage": "cimentacion",
+   "caption": "Armado de pilotes"
+  },
+  {
+   "file": "04-cimentacion.jpg",
+   "stage": "cimentacion",
+   "caption": "Excavación de pilotes"
+  },
+  {
+   "file": "05-cimentacion.jpg",
+   "stage": "cimentacion",
+   "caption": "Cabeza de pilote con acero"
+  },
+  {
+   "file": "06-cimentacion.jpg",
+   "stage": "cimentacion",
+   "caption": "Corte y ajuste de acero"
+  },
+  {
+   "file": "07-cimentacion.jpg",
+   "stage": "cimentacion",
+   "caption": "Excavación junto a edificio vecino"
+  },
+  {
+   "file": "08-cimentacion.mp4",
+   "poster": "08-cimentacion.jpg",
+   "stage": "cimentacion",
+   "caption": "Recorrido por la excavación",
+   "video": true
+  },
+  {
+   "file": "09-cimentacion.mp4",
+   "poster": "09-cimentacion.jpg",
+   "stage": "cimentacion",
+   "caption": "Avance de pilotes",
+   "video": true
+  },
+  {
+   "file": "10-cimentacion.mp4",
+   "poster": "10-cimentacion.jpg",
+   "stage": "cimentacion",
+   "caption": "Pilotes listos para vaciado",
+   "video": true
+  },
+  {
+   "file": "11-cimentacion.mp4",
+   "poster": "11-cimentacion.jpg",
+   "stage": "cimentacion",
+   "caption": "Vigas de cimentación",
+   "video": true
+  }
+ ],
+ "reforzamiento": [
+  {
+   "file": "01-reforzamiento.jpg",
+   "stage": "reforzamiento",
+   "caption": "Reforzamiento estructural con perfiles metálicos"
+  },
+  {
+   "file": "02-reforzamiento.jpg",
+   "stage": "reforzamiento",
+   "caption": "Apuntalamiento y entrepiso"
+  },
+  {
+   "file": "03-reforzamiento.jpg",
+   "stage": "reforzamiento",
+   "caption": "Ampliación de muros"
+  },
+  {
+   "file": "04-reforzamiento.mp4",
+   "poster": "04-reforzamiento.jpg",
+   "stage": "reforzamiento",
+   "caption": "Estructura de entrepiso",
+   "video": true
+  },
+  {
+   "file": "05-reforzamiento.mp4",
+   "poster": "05-reforzamiento.jpg",
+   "stage": "reforzamiento",
+   "caption": "Recorrido por el reforzamiento",
+   "video": true
+  },
+  {
+   "file": "06-reforzamiento.mp4",
+   "poster": "06-reforzamiento.jpg",
+   "stage": "reforzamiento",
+   "caption": "Adecuación de baño",
+   "video": true
+  },
+  {
+   "file": "07-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Cocina terminada"
+  },
+  {
+   "file": "08-acabados.mp4",
+   "poster": "08-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Cocina integral",
+   "video": true
+  },
+  {
+   "file": "09-acabados.mp4",
+   "poster": "09-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Sala en acabados",
+   "video": true
+  },
+  {
+   "file": "10-acabados.mp4",
+   "poster": "10-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Sala y comedor terminados",
+   "video": true
+  },
+  {
+   "file": "11-acabados.mp4",
+   "poster": "11-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Escalera en enchape",
+   "video": true
+  },
+  {
+   "file": "12-acabados.mp4",
+   "poster": "12-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Cocina con cielo iluminado",
+   "video": true
+  },
+  {
+   "file": "13-acabados.mp4",
+   "poster": "13-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Baño terminado",
+   "video": true
+  },
+  {
+   "file": "14-acabados.mp4",
+   "poster": "14-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Baño principal",
+   "video": true
+  },
+  {
+   "file": "15-acabados.mp4",
+   "poster": "15-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Baño con nicho iluminado",
+   "video": true
+  },
+  {
+   "file": "16-acabados.mp4",
+   "poster": "16-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Baño con división en vidrio",
+   "video": true
+  },
+  {
+   "file": "17-acabados.mp4",
+   "poster": "17-acabados.jpg",
+   "stage": "acabados",
+   "caption": "Baño social",
+   "video": true
+  }
+ ],
+ "pasamanos": [
+  {
+   "file": "01-vidrio.jpg",
+   "stage": "vidrio",
+   "caption": "Pasamanos en acero inoxidable y vidrio"
+  },
+  {
+   "file": "02-vidrio.jpg",
+   "stage": "vidrio",
+   "caption": "Detalle de anclaje"
+  },
+  {
+   "file": "03-vidrio.jpg",
+   "stage": "vidrio",
+   "caption": "Pasamanos en pasillo comercial"
+  },
+  {
+   "file": "04-vidrio.jpg",
+   "stage": "vidrio",
+   "caption": "Barandas en varios niveles"
+  },
+  {
+   "file": "05-vidrio.jpg",
+   "stage": "vidrio",
+   "caption": "Baranda en terraza"
+  },
+  {
+   "file": "06-vidrio.jpg",
+   "stage": "vidrio",
+   "caption": "Pasamanos junto a escaleras eléctricas"
+  },
+  {
+   "file": "07-metalicas.jpg",
+   "stage": "metalicas",
+   "caption": "Baranda tubular en andén"
+  },
+  {
+   "file": "08-metalicas.jpg",
+   "stage": "metalicas",
+   "caption": "Fabricación en taller"
+  },
+  {
+   "file": "09-metalicas.jpg",
+   "stage": "metalicas",
+   "caption": "Baranda metálica instalada"
+  },
+  {
+   "file": "10-metalicas.jpg",
+   "stage": "metalicas",
+   "caption": "Barandas en taller"
+  }
+ ]
+}

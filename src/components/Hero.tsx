@@ -101,7 +101,7 @@ function Skyline() {
   );
 }
 
-const lines = ["Construcción,", "diseño y", "mantenimiento"];
+const lines = ["Construimos hoy,", "transformamos", "mañana."];
 
 export function Hero() {
   const { scrollY } = useScroll();
@@ -130,7 +130,7 @@ export function Hero() {
                 transition={{ duration: 0.8, delay: 0.2, ease }}
                 className="h-0.5 w-10 origin-left bg-current"
               />
-              Construimos hoy, transformamos mañana
+              Horizonte Constructora SAS
             </motion.p>
 
             <h1 className="text-4xl font-extrabold uppercase leading-[1.05] text-ink sm:text-5xl lg:text-6xl">
@@ -209,9 +209,9 @@ export function Hero() {
                 initial={{ scale: 1.3 }}
                 animate={{ scale: 1.12 }}
                 transition={{ duration: 2, delay: 0.5, ease }}
-                src={asset("/img/mantenimiento-hero.jpg")}
-                alt="Técnico de Horizonte Constructora pintando un muro"
-                className="aspect-[4/5] w-full object-cover object-top lg:aspect-[5/6]"
+                src={asset("/img/hero.jpg")}
+                alt="Sala terminada por Horizonte Constructora en una casa campestre de Rozo"
+                className="aspect-[4/5] w-full object-cover object-center lg:aspect-[5/6]"
               />
             </motion.div>
           </div>

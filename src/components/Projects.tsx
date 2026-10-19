@@ -12,40 +12,34 @@ type Item = {
   src: string;
   thumb: string;
   caption: string;
-  date: string;
+  date?: string;
   stage: string;
-  portrait?: boolean;
 };
 
-// 11 + el video (que ocupa dos celdas) llenan filas completas en 2, 3 y 4 columnas.
-const INITIAL = 11;
+const INITIAL = 12;
 
 function useItems(project: Project) {
   return useMemo(() => {
     const base = `/proyectos/${project.slug}`;
-    const items: Item[] = project.media.map((m) => ({
-      kind: "image",
-      src: asset(`${base}/full/${m.file}`),
-      thumb: asset(`${base}/thumb/${m.file}`),
-      caption: m.caption,
-      date: m.date,
-      stage: m.stage,
-      portrait: m.portrait,
-    }));
-    if (project.video) {
-      // El video va al inicio de la etapa "nave", que es donde se grabó.
-      const at = items.findIndex((i) => i.stage === "nave");
-      items.splice(at < 0 ? 0 : at, 0, {
-        kind: "video",
-        src: asset(`${base}/${project.video.file}`),
-        thumb: asset(`${base}/${project.video.poster}`),
-        caption: project.video.caption,
-        date: project.video.date,
-        stage: "nave",
-        portrait: true,
-      });
-    }
-    return items;
+    return project.media.map<Item>((m) =>
+      m.video
+        ? {
+            kind: "video",
+            src: asset(`${base}/${m.file}`),
+            thumb: asset(`${base}/thumb/${m.poster}`),
+            caption: m.caption,
+            date: m.date,
+            stage: m.stage,
+          }
+        : {
+            kind: "image",
+            src: asset(`${base}/full/${m.file}`),
+            thumb: asset(`${base}/thumb/${m.file}`),
+            caption: m.caption,
+            date: m.date,
+            stage: m.stage,
+          },
+    );
   }, [project]);
 }
 
@@ -207,8 +201,8 @@ function Lightbox({
   );
 }
 
-function Timeline({ project }: { project: Project }) {
-  const n = project.timeline.length;
+function Timeline({ timeline }: { timeline: NonNullable<Project["timeline"]> }) {
+  const n = timeline.length;
   return (
     <motion.ol
       className="relative mt-10 grid gap-6 sm:grid-cols-5 sm:gap-4"
@@ -222,7 +216,7 @@ function Timeline({ project }: { project: Project }) {
         variants={{ hidden: { scale: 0 }, show: { scale: 1 } }}
         transition={{ duration: 0.3 * n, ease: "linear", delay: 0.2 }}
       />
-      {project.timeline.map((t, i) => (
+      {timeline.map((t, i) => (
         <motion.li
           key={t.date}
           className="relative flex gap-4 sm:block"
@@ -255,9 +249,12 @@ function ProjectShowcase({ project }: { project: Project }) {
   const filtered = stage === "todas" ? items : items.filter((i) => i.stage === stage);
   const visible = stage === "todas" && !expanded ? filtered.slice(0, INITIAL) : filtered;
   const stageLabel = (id: string) => project.stages.find((s) => s.id === id)?.label ?? "";
-  const photoCount = project.media.length;
+  const photoCount = items.filter((i) => i.kind === "image").length;
+  const videoCount = items.length - photoCount;
   const cover = asset(`/proyectos/${project.slug}/full/${project.cover}`);
-  const mapUrl = `https://www.google.com/maps?q=${project.coordinates.lat},${project.coordinates.lng}`;
+  const mapUrl = project.coordinates
+    ? `https://www.google.com/maps?q=${project.coordinates.lat},${project.coordinates.lng}`
+    : undefined;
 
   const tabs = [{ id: "todas", label: "Todas", count: items.length }].concat(
     project.stages.map((s) => ({ ...s, count: items.filter((i) => i.stage === s.id).length })),
@@ -279,7 +276,7 @@ function ProjectShowcase({ project }: { project: Project }) {
             <img
               src={cover}
               alt={project.name}
-              className="h-full w-full object-cover object-[75%_center] transition duration-[1.5s] ease-out group-hover:scale-105"
+              className="h-full w-full object-cover transition duration-[1.5s] ease-out group-hover:scale-105"
             />
             <span className="absolute inset-0 bg-gradient-to-t from-ink/80 via-ink/10 to-transparent" />
             <span className="absolute left-4 top-4 flex items-center gap-2 bg-white px-3 py-1.5 text-xs font-bold uppercase tracking-wider text-ink shadow">
@@ -291,7 +288,7 @@ function ProjectShowcase({ project }: { project: Project }) {
             </span>
             <span className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-4 text-white">
               <span className="whitespace-nowrap text-xs font-semibold uppercase tracking-widest text-white/80 sm:text-sm">
-                {photoCount} fotos{project.video ? " · 1 video" : ""}
+                {photoCount} fotos{videoCount ? ` · ${videoCount} ${videoCount === 1 ? "video" : "videos"}` : ""}
               </span>
               <span className="flex items-center gap-2 whitespace-nowrap bg-brand px-3 py-2 text-xs font-bold uppercase tracking-wide transition group-hover:bg-brand-light sm:px-4 sm:text-sm">
                 Ver galería
@@ -305,31 +302,37 @@ function ProjectShowcase({ project }: { project: Project }) {
 
         <Reveal x={50} y={0} delay={0.1}>
           <div className="flex h-full flex-col bg-white p-6 shadow-sm sm:p-8">
-            <p className="text-xs font-bold uppercase tracking-[0.25em] text-brand">Proyecto destacado</p>
+            <p className="text-xs font-bold uppercase tracking-[0.25em] text-brand">{project.category}</p>
             <h3 className="mt-2 text-2xl font-extrabold uppercase leading-tight text-ink sm:text-3xl">{project.name}</h3>
             <p className="mt-3 text-ink/70">{project.summary}</p>
             <dl className="mt-6 grid gap-4 border-t border-ink/10 pt-6 text-sm sm:grid-cols-2">
-              <div>
-                <dt className="text-xs font-bold uppercase tracking-wider text-ink/45">Ubicación</dt>
-                <dd className="mt-1 font-semibold text-ink">
-                  <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="underline decoration-brand/40 underline-offset-4 transition hover:text-brand">
-                    {project.location}
-                  </a>
-                </dd>
-              </div>
-              <div>
-                <dt className="text-xs font-bold uppercase tracking-wider text-ink/45">Arquitectura</dt>
-                <dd className="mt-1 font-semibold text-ink">{project.architect}</dd>
-              </div>
+              {project.location && (
+                <div>
+                  <dt className="text-xs font-bold uppercase tracking-wider text-ink/45">Ubicación</dt>
+                  <dd className="mt-1 font-semibold text-ink">
+                    {mapUrl ? (
+                      <a href={mapUrl} target="_blank" rel="noopener noreferrer" className="underline decoration-brand/40 underline-offset-4 transition hover:text-brand">
+                        {project.location}
+                      </a>
+                    ) : (
+                      project.location
+                    )}
+                  </dd>
+                </div>
+              )}
+              {project.architect && (
+                <div>
+                  <dt className="text-xs font-bold uppercase tracking-wider text-ink/45">Arquitectura</dt>
+                  <dd className="mt-1 font-semibold text-ink">{project.architect}</dd>
+                </div>
+              )}
               <div>
                 <dt className="text-xs font-bold uppercase tracking-wider text-ink/45">Tipo de obra</dt>
                 <dd className="mt-1 font-semibold text-ink">{project.type}</dd>
               </div>
               <div>
-                <dt className="text-xs font-bold uppercase tracking-wider text-ink/45">Coordenadas</dt>
-                <dd className="mt-1 font-semibold tabular-nums text-ink">
-                  {project.coordinates.lat.toFixed(4)}° N, {Math.abs(project.coordinates.lng).toFixed(4)}° O
-                </dd>
+                <dt className="text-xs font-bold uppercase tracking-wider text-ink/45">Estado</dt>
+                <dd className="mt-1 font-semibold text-ink">{project.status}</dd>
               </div>
             </dl>
             <ul className="mt-6 flex flex-wrap gap-2">
@@ -343,7 +346,7 @@ function ProjectShowcase({ project }: { project: Project }) {
         </Reveal>
       </div>
 
-      <Timeline project={project} />
+      {project.timeline && <Timeline timeline={project.timeline} />}
 
       {/* Filtros por etapa */}
       <LayoutGroup>
@@ -362,7 +365,7 @@ function ProjectShowcase({ project }: { project: Project }) {
               >
                 {stage === t.id && (
                   <motion.span
-                    layoutId="etapa-activa"
+                    layoutId={`etapa-${project.slug}`}
                     className="absolute inset-0 bg-brand"
                     transition={{ type: "spring", stiffness: 400, damping: 34 }}
                   />
@@ -434,7 +437,7 @@ function ProjectShowcase({ project }: { project: Project }) {
           >
             <span className="absolute inset-0 origin-left scale-x-0 bg-ink transition-transform duration-500 ease-out group-hover:scale-x-100" />
             <span className="relative">
-              {expanded ? "Ver menos" : `Ver las ${filtered.length} fotos y video`}
+              {expanded ? "Ver menos" : `Ver los ${filtered.length} archivos`}
             </span>
           </button>
         </div>
@@ -456,11 +459,61 @@ function ProjectShowcase({ project }: { project: Project }) {
 }
 
 export function Projects() {
+  const [slug, setSlug] = useState(projects[0].slug);
+  const project = projects.find((p) => p.slug === slug) ?? projects[0];
+
   return (
-    <div className="space-y-24">
-      {projects.map((p) => (
-        <ProjectShowcase key={p.slug} project={p} />
-      ))}
+    <div>
+      <LayoutGroup>
+        <div className="-mx-4 overflow-x-auto px-4 pb-3 sm:mx-0 sm:px-0">
+          <div className="flex w-max gap-3 lg:grid lg:w-auto lg:grid-cols-6">
+            {projects.map((p) => {
+              const active = p.slug === slug;
+              return (
+                <button
+                  key={p.slug}
+                  onClick={() => setSlug(p.slug)}
+                  aria-pressed={active}
+                  className={`group relative w-44 shrink-0 overflow-hidden bg-ink text-left transition lg:w-auto ${
+                    active ? "ring-2 ring-brand ring-offset-2 ring-offset-mist" : "opacity-80 hover:opacity-100"
+                  }`}
+                >
+                  <img
+                    src={asset(`/proyectos/${p.slug}/thumb/${p.cover}`)}
+                    alt=""
+                    className="aspect-[4/3] w-full object-cover transition duration-700 group-hover:scale-110"
+                  />
+                  <span className="absolute inset-0 bg-gradient-to-t from-ink/90 via-ink/30 to-transparent" />
+                  <span className="absolute inset-x-0 bottom-0 p-3">
+                    <span className="block text-[0.6rem] font-bold uppercase tracking-widest text-brand-light">{p.category}</span>
+                    <span className="mt-0.5 block text-sm font-bold leading-tight text-white">{p.name}</span>
+                  </span>
+                  {active && (
+                    <motion.span
+                      layoutId="proyecto-activo"
+                      className="absolute inset-x-0 top-0 h-1 bg-brand"
+                      transition={{ type: "spring", stiffness: 400, damping: 34 }}
+                    />
+                  )}
+                </button>
+              );
+            })}
+          </div>
+        </div>
+      </LayoutGroup>
+
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={project.slug}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          exit={{ opacity: 0, y: -20 }}
+          transition={{ duration: 0.45, ease }}
+          className="mt-10"
+        >
+          <ProjectShowcase project={project} />
+        </motion.div>
+      </AnimatePresence>
     </div>
   );
 }
