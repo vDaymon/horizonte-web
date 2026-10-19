@@ -83,6 +83,46 @@ export const maintenance: { icon: IconName; title: string }[] = [
   { icon: "wrench", title: "Acabados" },
 ];
 
+/** Antes y después. Fotos en /public/img/antes-despues/. `wide` ocupa todo el ancho. */
+export const beforeAfter: {
+  title: string;
+  service: string;
+  text: string;
+  before: string;
+  after: string;
+  wide?: boolean;
+}[] = [
+  {
+    title: "Escalera en concreto con enchape tipo mármol",
+    service: "Acabados y remodelación",
+    text: "De obra gris a escalera terminada con porcelanato e iluminación en muro.",
+    before: "/img/antes-despues/escalera-antes.jpg",
+    after: "/img/antes-despues/escalera-despues.jpg",
+    wide: true,
+  },
+  {
+    title: "Pasarela metálica",
+    service: "Mantenimiento y pintura",
+    text: "Limpieza de óxido, anticorrosivo y pintura de acabado.",
+    before: "/img/antes-despues/pasarela-antes.jpg",
+    after: "/img/antes-despues/pasarela-despues.jpg",
+  },
+  {
+    title: "Reja en malla expandida",
+    service: "Mantenimiento y pintura",
+    text: "Recuperación de estructura metálica oxidada.",
+    before: "/img/antes-despues/reja-antes.jpg",
+    after: "/img/antes-despues/reja-despues.jpg",
+  },
+  {
+    title: "Marcos metálicos",
+    service: "Mantenimiento y pintura",
+    text: "Tratamiento de óxido y pintura para mayor durabilidad.",
+    before: "/img/antes-despues/marcos-antes.jpg",
+    after: "/img/antes-despues/marcos-despues.jpg",
+  },
+];
+
 export const methodology = [
   { title: "Planeación", text: "Entendemos tu necesidad, definimos alcance, presupuesto y cronograma." },
   { title: "Diseño", text: "Desarrollamos el proyecto arquitectónico y técnico a la medida." },

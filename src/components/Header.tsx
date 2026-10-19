@@ -9,6 +9,7 @@ import { whatsappLink } from "@/data/site";
 const links = [
   { href: "#nosotros", label: "Nosotros" },
   { href: "#servicios", label: "Servicios" },
+  { href: "#antes-despues", label: "Antes y después" },
   { href: "#metodologia", label: "Metodología 360°" },
   { href: "#proyectos", label: "Proyectos" },
   { href: "#contacto", label: "Contacto" },
@@ -63,7 +64,7 @@ export function Header() {
           <Logo />
         </a>
 
-        <nav className="hidden items-center gap-8 lg:flex">
+        <nav className="hidden items-center gap-8 xl:flex">
           {links.map((l) => (
             <a
               key={l.href}
@@ -87,7 +88,7 @@ export function Header() {
 
         <button
           type="button"
-          className="relative z-10 flex h-11 w-11 items-center justify-center lg:hidden"
+          className="relative z-10 flex h-11 w-11 items-center justify-center xl:hidden"
           onClick={() => setOpen((v) => !v)}
           aria-label={open ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={open}
@@ -122,7 +123,7 @@ export function Header() {
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
             transition={{ duration: 0.45, ease }}
-            className="overflow-hidden border-t border-ink/10 bg-white lg:hidden"
+            className="overflow-hidden border-t border-ink/10 bg-white xl:hidden"
           >
             <motion.div
               className="px-4 pb-6"

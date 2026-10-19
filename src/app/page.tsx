@@ -1,4 +1,5 @@
 /* eslint-disable @next/next/no-img-element */
+import { BeforeAfter } from "@/components/BeforeAfter";
 import { ContactForm } from "@/components/ContactForm";
 import { Header } from "@/components/Header";
 import { Hero } from "@/components/Hero";
@@ -184,6 +185,32 @@ export default function Home() {
                 </div>
               </div>
             </Reveal>
+          </div>
+        </section>
+
+        {/* ANTES Y DESPUÉS */}
+        <section id="antes-despues" className="blueprint py-20 lg:py-28">
+          <div className="mx-auto max-w-7xl px-4 sm:px-6">
+            <Reveal className="mb-12 flex flex-col justify-between gap-6 md:flex-row md:items-end">
+              <div className="max-w-2xl">
+                <Eyebrow>Antes y después</Eyebrow>
+                <h2 className="text-3xl font-extrabold uppercase text-ink sm:text-4xl">
+                  Transformamos espacios, <span className="text-brand">construimos confianza</span>
+                </h2>
+                <p className="mt-4 text-lg text-ink/70">
+                  Desliza la línea sobre cada foto para ver el cambio. Renovamos, protegemos y embellecemos tus espacios.
+                </p>
+              </div>
+              <ul className="flex flex-wrap gap-2 text-xs font-bold uppercase tracking-wider text-ink/70">
+                {["Acabados profesionales", "Resultados que duran", "Calidad y seguridad"].map((t) => (
+                  <li key={t} className="flex items-center gap-2 bg-white px-3 py-2 shadow-sm">
+                    <span className="h-1.5 w-1.5 bg-brand" />
+                    {t}
+                  </li>
+                ))}
+              </ul>
+            </Reveal>
+            <BeforeAfter />
           </div>
         </section>
 
