@@ -41,7 +41,7 @@ export const services: {
     icon: "crane",
     title: "Construcción",
     text: "Ejecutamos estructuras de concreto con calidad y cumplimiento, desde la cimentación hasta la obra terminada.",
-    points: ["Pilotes y cimentaciones", "Estructuras en concreto", "Sistema semi industrializado"],
+    points: ["Pilotes y cimentaciones", "Estructura metálica", "Sistema semi industrializado"],
   },
   {
     icon: "blueprint",

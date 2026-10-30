@@ -83,19 +83,6 @@ function Skyline() {
         <path
           d={`M1140 ${BASE - 280}V${BASE}M1135 ${BASE - 280}h10M1135 ${BASE}h10`}
         />
-        <text
-          x={1128}
-          y={BASE - 140}
-          fill="var(--color-brand)"
-          fillOpacity={0.6}
-          stroke="none"
-          fontSize={11}
-          letterSpacing={2}
-          textAnchor="middle"
-          transform={`rotate(-90 1128 ${BASE - 140})`}
-        >
-          26 PISOS
-        </text>
       </motion.g>
     </svg>
   );
@@ -220,15 +207,11 @@ export function Hero() {
 
       {/* Cifras */}
       <div className="relative bg-ink text-white">
-        <div className="mx-auto grid max-w-7xl gap-px bg-white/10 sm:grid-cols-3">
+        <div className="mx-auto grid max-w-7xl gap-px bg-white/10 sm:grid-cols-2">
           {[
             {
               n: <Counter value={700000} prefix="+" suffix=" kg" />,
               t: "de acero instalados en pilotes y cimentación",
-            },
-            {
-              n: <Counter value={26} suffix=" pisos" />,
-              t: "por torre: cimentación de 3 torres ejecutada",
             },
             {
               n: <Counter value={360} suffix="°" />,
